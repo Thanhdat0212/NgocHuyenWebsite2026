@@ -40,6 +40,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 body {
@@ -227,6 +228,7 @@ button {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  scroll-snap-align: start;
   background:
     radial-gradient(ellipse 60% 50% at 22% 18%, rgba(236, 201, 203, .55), transparent 60%),
     radial-gradient(ellipse 55% 45% at 82% 78%, rgba(201, 162, 75, .28), transparent 60%),
@@ -437,6 +439,11 @@ button {
   position: relative;
   background: var(--tone);
   padding-block: var(--space-section);
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  scroll-snap-align: start;
 }
 
 .chapter__seam {

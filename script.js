@@ -65,6 +65,10 @@
     setTimeout(function () {
       cover.setAttribute('hidden', '');
       main.removeAttribute('hidden');
+      var firstChapter = main.querySelector('.chapter');
+      if (firstChapter) {
+        firstChapter.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      }
       typeGreeting(typedTextEl, fullGreeting, 55);
       initReveal();
     }, revealDelay);
