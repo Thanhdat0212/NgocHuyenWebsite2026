@@ -44,6 +44,7 @@
     </button>
 
     <h1 class="hero__title">Có một điều bất ngờ<br>đang chờ Huyền...</h1>
+    <p class="hero__tagline">Một hành trình nhỏ, gói ghém riêng cho ngày hôm nay của em.</p>
     <p class="hero__sub">Chạm vào món quà để mở ra nhé</p>
 
     <button type="button" id="openGift" class="btn btn--primary">
@@ -57,7 +58,14 @@
 
 <main id="main-content" class="chapters" hidden>
 
-  <section class="chapter chapter--message" style="--tone: var(--cream-message);">
+  <nav class="chapter-dots" aria-label="Điều hướng chương">
+    <a href="#chapter-message" class="chapter-dots__item" data-target="chapter-message" aria-label="Chương 1: Lời chúc"></a>
+    <a href="#chapter-gallery" class="chapter-dots__item" data-target="chapter-gallery" aria-label="Chương 2: Kỷ niệm"></a>
+    <a href="#chapter-wish" class="chapter-dots__item" data-target="chapter-wish" aria-label="Chương 3: Điều ước"></a>
+    <a href="#chapter-final" class="chapter-dots__item" data-target="chapter-final" aria-label="Chương 4: Lời nhắn cuối"></a>
+  </nav>
+
+  <section id="chapter-message" class="chapter chapter--message" style="--tone: var(--cream-message);">
     <div class="chapter__seam" aria-hidden="true"></div>
     <div class="container message-layout">
       <div class="reveal">
@@ -77,7 +85,7 @@
     </div>
   </section>
 
-  <section class="chapter chapter--gallery" style="--tone: var(--cream-gallery);">
+  <section id="chapter-gallery" class="chapter chapter--gallery" style="--tone: var(--cream-gallery);">
     <div class="chapter__seam" aria-hidden="true"></div>
     <div class="container">
       <p class="kicker">02 · Kỷ niệm</p>
@@ -92,20 +100,20 @@
           <span class="memory-card__frame"><img src="assets/photo-bachahui.jpg" alt="Bà chã húi" width="1179" height="1600" loading="lazy"></span>
           <span class="memory-card__caption">Bà chã húi</span>
         </button>
-        <button type="button" class="memory-card" data-src="assets/photo-lanhauhentho.jpg" data-caption="Bà chã húi">
-          <span class="memory-card__frame"><img src="assets/photo-lanhauhentho.jpg" alt="Bà chã húi" width="1200" height="1600" loading="lazy"></span>
-          <span class="memory-card__caption">Bà chã húi</span>
+        <button type="button" class="memory-card" data-src="assets/photo-lanhauhentho.jpg" data-caption="Vẫn là bà chã húi thôi">
+          <span class="memory-card__frame"><img src="assets/photo-lanhauhentho.jpg" alt="Vẫn là bà chã húi thôi" width="1200" height="1600" loading="lazy"></span>
+          <span class="memory-card__caption">Vẫn là bà chã húi thôi</span>
         </button>
-        <button type="button" class="memory-card" data-src="assets/photo-khoangkhac.jpg" data-caption="Bà chã húi">
+        <button type="button" class="memory-card" data-src="assets/photo-khoangkhac.jpg" data-caption="Bà chã húi, không đổi được đâu">
           <span class="memory-card__tape" aria-hidden="true"></span>
-          <span class="memory-card__frame"><img src="assets/photo-khoangkhac.jpg" alt="Bà chã húi" width="1066" height="1600" loading="lazy"></span>
-          <span class="memory-card__caption">Bà chã húi</span>
+          <span class="memory-card__frame"><img src="assets/photo-khoangkhac.jpg" alt="Bà chã húi, không đổi được đâu" width="1066" height="1600" loading="lazy"></span>
+          <span class="memory-card__caption">Bà chã húi, không đổi được đâu</span>
         </button>
       </div>
     </div>
   </section>
 
-  <section class="chapter chapter--wish" style="--tone: var(--cream-wish);">
+  <section id="chapter-wish" class="chapter chapter--wish" style="--tone: var(--cream-wish);">
     <div class="chapter__seam" aria-hidden="true"></div>
     <div class="container">
       <p class="kicker">03 · Điều ước</p>
@@ -128,7 +136,7 @@
     </div>
   </section>
 
-  <section class="chapter chapter--final" style="--tone: var(--cream-final);">
+  <section id="chapter-final" class="chapter chapter--final" style="--tone: var(--cream-final);">
     <div class="chapter__seam" aria-hidden="true"></div>
     <div class="container">
       <p class="kicker" style="text-align:center;">04 · Lời nhắn cuối</p>

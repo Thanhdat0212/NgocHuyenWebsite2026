@@ -71,6 +71,7 @@
       }
       typeGreeting(typedTextEl, fullGreeting, 55);
       initReveal();
+      initChapterDots();
     }, revealDelay);
   }
 
@@ -97,6 +98,29 @@
       });
     }, { threshold: 0.18, rootMargin: '0px 0px -60px 0px' });
     targets.forEach(function (t) { observer.observe(t); });
+  }
+
+  /* ---------- Chapter progress dots ---------- */
+  var dotsInitialized = false;
+
+  function initChapterDots() {
+    if (dotsInitialized) return;
+    dotsInitialized = true;
+    var dots = Array.prototype.slice.call(document.querySelectorAll('.chapter-dots__item'));
+    if (!dots.length || !('IntersectionObserver' in window)) return;
+    var sections = dots.map(function (d) {
+      return document.getElementById(d.getAttribute('data-target'));
+    });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var idx = sections.indexOf(entry.target);
+        if (idx === -1) return;
+        dots.forEach(function (d) { d.classList.remove('is-active'); });
+        dots[idx].classList.add('is-active');
+      });
+    }, { threshold: 0.5 });
+    sections.forEach(function (s) { if (s) observer.observe(s); });
   }
 
   /* ---------- Candle / wish ---------- */
