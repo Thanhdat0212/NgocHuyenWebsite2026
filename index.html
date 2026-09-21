@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chúc mừng sinh nhật em bé của anh</title>
+<meta name="description" content="Một trang nhỏ chúc mừng sinh nhật, từ Thành Đạt gửi Huyền.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+  <section id="cover" class="cover">
+    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.4" class="gift-icon">
+      <path d="M4 9h16v11H4z"></path>
+      <path d="M4 9a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3"></path>
+      <path d="M12 6V20"></path>
+      <path d="M8.5 6a2 2 0 1 1 3.5-2 2 2 0 1 1 3.5 2"></path>
+    </svg>
+    <h1 class="cover-title">Có một điều bất ngờ đang chờ Huyền...</h1>
+    <p class="cover-sub">Chạm vào món quà để mở ra nhé</p>
+    <button type="button" id="openGift" class="btn-primary">Mở quà</button>
+  </section>
+
+  <main id="main" class="main" hidden>
+
+    <section class="block">
+      <div class="eyebrow">Hôm nay là ngày của em</div>
+      <h1 class="typed-heading"><span id="typedText"></span><span class="cursor">|</span></h1>
+      <p class="body-text">
+        Một năm nữa lại trôi qua, và anh vẫn thấy may mắn vì có Huyền bên cạnh. Chúc em luôn rạng rỡ, bình an và tin rằng mình xứng đáng với tất cả những điều tốt đẹp nhất trên đời. Cảm ơn em vì đã luôn kiên nhẫn, dịu dàng và là chính mình bên anh suốt thời gian qua.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Những khoảnh khắc của chúng mình</h2>
+      <div class="gallery">
+        <figure class="polaroid rot-1">
+          <img src="assets/photo-bachahui.jpg" alt="Bà chã húi" loading="lazy">
+          <figcaption>Bà chã húi</figcaption>
+        </figure>
+        <figure class="polaroid rot-2">
+          <img src="assets/photo-lanhauhentho.jpg" alt="Bà chã húi" loading="lazy">
+          <figcaption>Bà chã húi</figcaption>
+        </figure>
+        <figure class="polaroid rot-3">
+          <img src="assets/photo-chuyendi.jpg" alt="Chuyến đi đáng nhớ" loading="lazy">
+          <figcaption>Chuyến đi đáng nhớ</figcaption>
+        </figure>
+        <figure class="polaroid rot-4">
+          <img src="assets/photo-khoangkhac.jpg" alt="Bà chã húi" loading="lazy">
+          <figcaption>Bà chã húi</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="block center">
+      <h2 class="section-title center">Thổi nến và ước một điều gì đó nhé</h2>
+      <button type="button" id="candleBtn" class="candle-btn" aria-label="Thổi nến và ước một điều gì đó">
+        <svg viewBox="0 0 40 90" class="candle-svg">
+          <rect x="14" y="34" width="12" height="48" rx="3" fill="#FFF7E8" stroke="var(--accent)" stroke-width="2"></rect>
+          <rect x="14" y="34" width="12" height="10" fill="var(--accent)" opacity=".25"></rect>
+          <path id="flame" d="M20 8c5 7 6 12 3 16-2 2.6-6 2.6-8 0-2.4-3.4-1-8.6 5-16Z" fill="var(--accent2)"></path>
+          <path id="smoke" d="M20 20c-4 0 -2 -8 2 -10" stroke="#B7ABA6" stroke-width="2" fill="none" stroke-linecap="round" hidden></path>
+        </svg>
+      </button>
+      <div id="wishText" class="wish-card" hidden>
+        Ước gì mọi điều Huyền mong đều thành hiện thực trong năm nay.
+      </div>
+    </section>
+
+    <section class="block center">
+      <div id="notSent">
+        <h2 class="section-title center">Và cuối cùng...</h2>
+        <p class="body-text center">
+          Thêm một tuổi mới, mong em luôn rạng rỡ như bây giờ — và nếu có thể, hãy để anh ở bên em trong mọi khoảnh khắc sắp tới. Chúc em sinh nhật ngập tràn yêu thương và niềm vui!
+        </p>
+        <button type="button" id="sendLove" class="btn-primary">Gửi yêu thương</button>
+      </div>
+      <div id="loveSent" class="love-sent" hidden>
+        <svg viewBox="0 0 24 24" fill="var(--accent)" class="heart-icon">
+          <path d="M12 21s-6.716-4.35-9.428-8.485C.325 9.028 1.42 5 5.2 5c2.076 0 3.396 1.14 4.8 3 1.404-1.86 2.724-3 4.8-3 3.78 0 4.875 4.028 2.628 7.515C18.716 16.65 12 21 12 21z"></path>
+        </svg>
+        <h2 class="section-title center">Chúc mừng sinh nhật, Bà chã của anh.</h2>
+        <p class="signature">Yêu em rất nhiều — Thành Đạt</p>
+      </div>
+    </section>
+
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
